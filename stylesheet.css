@@ -72,6 +72,7 @@ nav ul li i{
 }
 .icon{
     width: 50px;
+    font-size: 25px;
 }
 #tweetButton{
     margin-left: 20px;
@@ -84,6 +85,9 @@ nav ul li i{
     margin-top: 20px;
     border: none;
     cursor: pointer;
+}
+#tweetButton i{
+    display: none;
 }
 #tweetButton:hover{
     background: rgba(6, 144, 250, 0.8);
@@ -315,6 +319,7 @@ main{
 
 aside{
     max-width: 400px;
+    width: 100%;
     position: fixed;
     margin-left: 800px;
     padding-left: 30px;
@@ -322,6 +327,45 @@ aside{
     
 }
 
+
 .search input{
     width: 100%;
+}
+
+@media screen and (max-width: 1240px) {
+    .navLinks span{
+        display: none;
+    }
+    #tweetButton i{
+        display: block;
+        --size: 25px;
+        height: var(--size);
+        width: var(--size);
+    }
+    #tweetButton span{
+        display: none;
+    }
+
+    #tweetButton{
+        padding: 15px 15px;
+        margin-left: 8px;
+
+    }
+    #profileName{
+        display: none;
+    }
+    #profileName  i{
+        display: none;
+    }
+    #profile{
+        width:fit-content;
+    }
+    nav{
+        width: fit-content;
+        position: fixed;
+        left: 120px;
+    }
+    aside{
+        display: none;
+    }
 }
