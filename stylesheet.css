@@ -175,6 +175,11 @@ main{
     border-right: 1px solid var(--border-color);
     margin-left: 200px;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
 .headingBlock{
     display: block;
     position: sticky;
