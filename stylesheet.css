@@ -156,7 +156,8 @@ nav ul li i{
     border-bottom: 1px solid white;
     position: absolute;
     z-index: 1;
-    transform: rotate(45deg)translateY(-6px);
+    background: black;
+    transform: rotate(45deg)translateY(-9px);
 }
 
 #profileBlock > div:first-child{
@@ -331,15 +332,46 @@ aside{
     padding-top: 10px;
     
 }
-
-
-.search input{
-    width: 100%;
+.searchBlock{
+    display: flex;
+    background: #202327;
+    padding: 10px 20px;
+    border-radius: 50px;
 }
+.searchBlock input{
+    background: none;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    color: #6c7175;
+    font-size: 18px;
+}
+.searchBlock i{
+    color: #6c7175;
+    font-size: 15px;
+}
+
 
 @media screen and (max-width: 1240px) {
     .navLinks span{
         display: none;
+    }
+    .icon{
+        display: flex;
+        width: 30px;
+        height: 30px;        
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul li{
+        padding: 10px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul li i {
+        margin: 0;
+        transform: translateX(2px);
     }
     #tweetButton i{
         display: block;
@@ -353,7 +385,7 @@ aside{
 
     #tweetButton{
         padding: 15px 15px;
-        margin-left: 8px;
+        margin-left: 0;
 
     }
     #profileName{
@@ -368,7 +400,8 @@ aside{
     nav{
         width: fit-content;
         position: fixed;
-        left: 120px;
+        left: 135px;
+        scrollbar-width: none;
     }
     aside{
         display: none;
