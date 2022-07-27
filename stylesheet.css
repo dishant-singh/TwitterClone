@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,400&display=swap');
+
+html,
+body,
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+:root {
+    --border-color: rgb(47, 51, 54);; /*varuavble decalration*/
+}
+
+.hidden {
+    display: none;
+}
+
+body{
+    background: black;
+    color: aliceblue;
+}
+
+.container{
+    margin: auto;
+    max-width: calc(200px + 600px  + 400px + 20px);
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo i{
+        transform: scale(200%);
+        margin-left: 20px;
+        margin-top: 20px;
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    overflow: scroll;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+nav ul{
+    list-style: none;    
+    margin-top: 50px;
+}
+nav ul li{
+    display: flex;
+    padding: 10px 20px;
+    width: max-content;
+    align-items: center;
+    border-radius: 50px;
+}
+nav ul li:hover{
+    background: rgb(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+
+nav ul li i{
+    margin-right: 10px;
+    width: 50px;
+}
+.icon{
+    width: 50px;
+}
+#tweetButton{
+    margin-left: 20px;
+    padding: 10px 50px;
+    background-color: #1D9BF0;
+    color: aliceblue;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}
+#tweetButton:hover{
+    background: rgba(6, 144, 250, 0.8);
+}
+#profile button{
+    border: none;
+   background: none;
+   width: 100%;
+   border-radius: 50px;
+   display: flex;
+   color: white;
+   padding: 10px;
+   position: relative;
+}
+
+#profile button:hover{
+    background: rgb(255, 255, 255, 0.1);
+}
+
+#profile{
+    margin-top: 50px;
+}
+#profile i{
+    position:absolute;
+    right: 20px;
+    top: 50%;
+}
+#profileImageContainer{
+    height: 50px;
+    width: 50px;
+}
+#profile img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+#profileName{
+    text-align: start;
+    margin-left: 10px;
+}
+#name{
+    font-weight: 400;
+    font-size: 15px;
+}
+#userName{
+    font-weight: 100;
+    color:rgb(113, 118, 123)
+}
+#profileBlock{
+        position: fixed;
+        border: 1px solid white;
+        background-color: black;
+        margin-bottom: 100px;
+        bottom: 0;
+        width: 270px;
+        border-radius: 16px;
+        padding-top: 1rem;
+        z-index: 5;
+        box-shadow: 0 0 15px rgba(136,153,166,.2),0 0 3px 1px rgba(136,153,166,.15);
+}
+#profileBlock::after{
+    content: "";
+    height: 15px;
+    width: 15px;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(45deg)translateY(-6px);
+}
+
+#profileBlock > div:first-child{
+    display: flex;
+    padding: 10px 20px;
+
+}
+.accountOption{
+    padding: 10px 30px;
+}
+main{
+    justify-content: center;
+    width: 600px;
+    height: 100vh;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    margin-left: 200px;
+}
+.headingBlock{
+    display: block;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(2px);
+    background-color:black;
+    height: 50px;
+    width: 100%;
+    z-index: 5;
+}
+.heading{
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.bottomButton{
+    padding: 5px 20px;
+    background-color: #1D9BF0;
+    color: aliceblue;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+.bottomButton:hover{
+    background: rgba(6, 144, 250, 0.8);
+}
+.left img{
+    height: 50px;
+    border-radius: 50px;
+    margin-left: 20px;
+}
+.right{
+    width: 100%;
+}
+.tweetBox{
+    display: flex;
+    margin-top: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+.tweetBox textarea{
+    display: block;
+    resize: none;
+    background: black;
+    color: whitesmoke;
+    border: none;
+    margin-top: 10px;
+    margin-left: 10px;
+    outline: none;
+}
+.bottom{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    margin-right: 20px;
+}
+.bottom ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.boxIcon{
+    padding: 8px;
+    color: #1D9BF0;
+    text-align: end;
+}
+.boxIcon:hover{
+    background-color: rgba(29, 155, 240,0.1);
+    border-radius: 50px;
+    cursor: pointer;
+}
+.visibility{
+    display: flex;
+    background-color: black;
+    color: #1D9BF0;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+
+} 
+.moreTweets{
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px;
+    color: #1D9BF0;
+    font-size: 15px;
+}
+.moreTweets:hover{
+    cursor: pointer;
+    background: rgb(255, 255, 255, 0.1);
+}
+.post1{
+    display: flex;
+    margin-top: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+.postinfo{
+    margin-left: 10px;
+    font-size: 15px;
+    justify-content: space-between;
+}
+.hashtag{
+    color: #1D9BF0;
+}
+.post{
+    margin-right: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+}
+.postReaction{
+    display: flex;
+    margin-left: -30px;
+}
+.postReaction ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.react{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+.react:hover{
+    background-color: rgba(13, 111, 176, 0.5);
+    border-radius: 50px;
+}
+
+aside{
+    max-width: 400px;
+    position: fixed;
+    margin-left: 800px;
+    padding-left: 30px;
+    padding-top: 10px;
+    
+}
+
+.search input{
+    width: 100%;
+}
