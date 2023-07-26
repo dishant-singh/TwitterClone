@@ -1,3 +1,1 @@
-# TwitterClone
-just trying to master my css skill and js xd ... with the help of sidharth senpai...
 
